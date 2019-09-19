@@ -1,4 +1,4 @@
-<?php require 'conexion.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,6 +58,10 @@
         INNER JOIN Dependencias ON Dependencias.id = Pedidos.idDependencia
         WHERE Pedidos.id = 54";
         $datos_Fiscales = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+
+
+
+        
                 
        ?>
         <tr>

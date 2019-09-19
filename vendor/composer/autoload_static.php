@@ -11,6 +11,10 @@ class ComposerStaticInit8a4199abb836cf858aafd32eee63d090
         array (
             'Svg\\' => 4,
         ),
+        'N' => 
+        array (
+            'NumeroALetras\\' => 14,
+        ),
         'F' => 
         array (
             'FontLib\\' => 8,
@@ -25,6 +29,10 @@ class ComposerStaticInit8a4199abb836cf858aafd32eee63d090
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
+        'NumeroALetras\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/luecano/numero-a-letras/src',
         ),
         'FontLib\\' => 
         array (

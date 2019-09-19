@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa901ff85ae51412c23232886d8eb694",
+    "content-hash": "a16ec99a83cb6b7d317bfee28fb73b38",
     "packages": [
         {
             "name": "dompdf/dompdf",
@@ -71,6 +71,52 @@
             "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
             "homepage": "https://github.com/dompdf/dompdf",
             "time": "2018-12-14T02:40:31+00:00"
+        },
+        {
+            "name": "luecano/numero-a-letras",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/luecano/numero-a-letras.git",
+                "reference": "059796cd2e53c3204b9ac49d1484853bbb5b5a7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/luecano/numero-a-letras/zipball/059796cd2e53c3204b9ac49d1484853bbb5b5a7b",
+                "reference": "059796cd2e53c3204b9ac49d1484853bbb5b5a7b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NumeroALetras\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luis Cano",
+                    "email": "luecano@gmail.com",
+                    "homepage": "https://github.com/luecano",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convierte un número a letras con formato de moneda para facturación electrónica.",
+            "homepage": "https://github.com/luecano/numero-a-letras",
+            "keywords": [
+                "convertir",
+                "facturacion",
+                "letras",
+                "numero",
+                "sunat"
+            ],
+            "time": "2019-09-04T02:53:46+00:00"
         },
         {
             "name": "phenx/php-font-lib",
