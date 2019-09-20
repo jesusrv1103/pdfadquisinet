@@ -1,0 +1,97 @@
+SELECT 
+Pedidos.id as pedido,
+Dependencias.nombre AS dependencia,
+Proveedores.razonSocial,
+Proveedores.rfc,
+Pedidos.fecha,
+MAX(DetallesCotizaciones.diasEntrega) AS tiempoDeEntrega
+FROM Pedidos
+INNER JOIN DetallesPedidos AS detalles ON detalles.idPedido = Pedidos.id
+INNER JOIN Asignaciones AS asignacion ON asignacion.id = detalles.idAsignacion
+INNER JOIN DetallesCotizaciones ON DetallesCotizaciones.id = asignacion.idDetalleCotizacion
+INNER JOIN Proveedores ON Proveedores.id = Pedidos.idProveedor
+INNER JOIN Dependencias ON Dependencias.id = Pedidos.idDependencia
+WHERE Pedidos.id = 1;
+
+SELECT 
+	Validaciones.fuenteFinan,
+	Validaciones.proceso,
+	Validaciones.unidadAdmin,
+	Partidas.numero AS partida,
+	DetallesRequisiciones.idRequisicion AS IdRequisicion,
+	DetallesRequisiciones.id AS IdDetalleRequisicion,
+	DetallesPedidos.id AS detallePedido,
+	DetallesRequisiciones.cantidad,
+	concat(Productos.nombre,'-',Marcas.nombre) AS producto,
+	(DetallesCotizaciones.precio/(1 + Impuestos.decima)) AS precio,
+	(DetallesPedidos.monto/(1 + Impuestos.decima)) AS importe,
+	((DetallesPedidos.monto/(1 + Impuestos.decima)) * Impuestos.decima) AS iva
+FROM Pedidos
+INNER JOIN DetallesPedidos ON DetallesPedidos.idPedido = Pedidos.id
+INNER JOIN Asignaciones ON Asignaciones.id = DetallesPedidos.idAsignacion
+INNER JOIN DetallesCotizaciones ON DetallesCotizaciones.id = Asignaciones.idDetalleCotizacion
+INNER JOIN DetallesRequisiciones ON DetallesRequisiciones.id = Asignaciones.idDetalleRequisicion
+INNER JOIN Partidas ON Partidas.id = DetallesRequisiciones.idPartida
+INNER JOIN Productos ON Productos.id = DetallesRequisiciones.idProducto
+INNER JOIN Impuestos on Productos.idImpuesto = Impuestos.id 
+INNER JOIN Marcas on Productos.idMarca = Marcas.id
+INNER JOIN (
+	SELECT
+	DetallesRequisiciones.id,
+	FuentesFinanciamientos.numero AS fuenteFinan,
+	Procesos.numero AS proceso,
+	TiposGastos.numero AS tipoGasto,
+	UnidadesAdministrativas.numero AS unidadAdmin,
+    UnidadesAdministrativas.clave AS cve_accion
+	FROM DetallesRequisiciones
+	INNER join UnidadesAdministrativas on DetallesRequisiciones.idUnidadAdmin = UnidadesAdministrativas.id
+    INNER join FuentesFinanciamientos on UnidadesAdministrativas.idFuenteFinan = FuentesFinanciamientos.id
+    INNER join Procesos on UnidadesAdministrativas.idProceso = Procesos.id
+    INNER join TiposGastos on UnidadesAdministrativas.idTipoGasto = TiposGastos.id
+) AS Validaciones ON Validaciones.id = DetallesRequisiciones.id
+WHERE Pedidos.id = 100 and DetallesPedidos.estatus not in('Cancelado','Rechazado');
+
+
+
+
+
+
+
+
+
+
+SELECT 
+
+	Validaciones.unidadAdmin,
+	Validaciones.tipoGasto,
+	Partidas.numero AS partida,
+	DetallesPedidos.id AS detallePedido,
+	DetallesRequisiciones.cantidad,
+	concat(Productos.nombre,'-',Marcas.nombre) AS producto,
+	Productos.presentacion,
+	(DetallesCotizaciones.precio/(1 + Impuestos.decima)) AS precio,
+	(DetallesPedidos.monto/(1 + Impuestos.decima)) AS importe
+FROM Pedidos
+INNER JOIN DetallesPedidos ON DetallesPedidos.idPedido = Pedidos.id
+INNER JOIN Asignaciones ON Asignaciones.id = DetallesPedidos.idAsignacion
+INNER JOIN DetallesCotizaciones ON DetallesCotizaciones.id = Asignaciones.idDetalleCotizacion
+INNER JOIN DetallesRequisiciones ON DetallesRequisiciones.id = Asignaciones.idDetalleRequisicion
+INNER JOIN Partidas ON Partidas.id = DetallesRequisiciones.idPartida
+INNER JOIN Productos ON Productos.id = DetallesRequisiciones.idProducto
+INNER JOIN Impuestos on Productos.idImpuesto = Impuestos.id 
+INNER JOIN Marcas on Productos.idMarca = Marcas.id
+INNER JOIN (
+	SELECT
+	DetallesRequisiciones.id,
+	FuentesFinanciamientos.numero AS fuenteFinan,
+	Procesos.numero AS proceso,
+	TiposGastos.numero AS tipoGasto,
+	UnidadesAdministrativas.numero AS unidadAdmin,
+    UnidadesAdministrativas.clave AS cve_accion
+	FROM DetallesRequisiciones
+	INNER join UnidadesAdministrativas on DetallesRequisiciones.idUnidadAdmin = UnidadesAdministrativas.id
+    INNER join FuentesFinanciamientos on UnidadesAdministrativas.idFuenteFinan = FuentesFinanciamientos.id
+    INNER join Procesos on UnidadesAdministrativas.idProceso = Procesos.id
+    INNER join TiposGastos on UnidadesAdministrativas.idTipoGasto = TiposGastos.id
+) AS Validaciones ON Validaciones.id = DetallesRequisiciones.id
+WHERE Pedidos.id = 103 and DetallesPedidos.estatus not in('Cancelado','Rechazado');

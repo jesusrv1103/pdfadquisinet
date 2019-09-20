@@ -1,0 +1,77 @@
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1329;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1329;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1359;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1359;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1366;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1366;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1315;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1315;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1340;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1340;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1371;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1371;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1368;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1368;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1369;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1369;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1373;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1373;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1353;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1353;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1352;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1352;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1363;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1363;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1324;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1324;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1337;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1337;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1364;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1364;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1325;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1325;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1331;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1331;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1346;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1346;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 1 where DetallesRequisiciones.id =1318;
+update  DetallesRequisiciones  set idPartida = 1 where DetallesRequisiciones.id =1318;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 3 where DetallesRequisiciones.id =1319;
+update  DetallesRequisiciones  set idPartida = 3 where DetallesRequisiciones.id =1319;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1332;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1332;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 3 where DetallesRequisiciones.id =1345;
+update  DetallesRequisiciones  set idPartida = 3 where DetallesRequisiciones.id =1345;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 1 where DetallesRequisiciones.id =1316;
+update  DetallesRequisiciones  set idPartida = 1 where DetallesRequisiciones.id =1316;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 2 where DetallesRequisiciones.id =1317;
+update  DetallesRequisiciones  set idPartida = 2 where DetallesRequisiciones.id =1317;
+
+update  DetallesRequisiciones  set idUnidadAdmin = 1 where DetallesRequisiciones.id =1330;
+update  DetallesRequisiciones  set idPartida = 1 where DetallesRequisiciones.id =1330;
+
+
+

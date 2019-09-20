@@ -1,0 +1,16 @@
+
+select Productos.nombre, Pedidos.id, DetallesRequisiciones.id as idDetalleRequisicion, DetallesRequisiciones.idPartida, UnidadesAdministrativas.id AS idUnidad, 
+UnidadesAdministrativas.numero  from 
+Pedidos, Asignaciones, DetallesPedidos, DetallesRequisiciones, Productos, Requisiciones, Cotizaciones, DetallesCotizaciones, UnidadesAdministrativas
+where DetallesPedidos.idPedido = Pedidos.id
+and DetallesPedidos.idAsignacion =  Asignaciones.id
+and Asignaciones.idDetalleRequisicion = DetallesRequisiciones.id
+and DetallesRequisiciones.idRequisicion =Requisiciones.id
+and DetallesCotizaciones.idCotizacion = Cotizaciones.id
+and DetallesCotizaciones.idProducto = Productos.id
+and Pedidos.id=100
+and Productos.nombre="HILO CANAMO"
+Group By Pedidos.id;
+
+update  DetallesRequisiciones  set idUnidadResponsable = 1 where DetallesRequisiciones.id =1370;
+update  DetallesRequisiciones  set idPartida = 1 where DetallesRequisiciones.id =1370;
